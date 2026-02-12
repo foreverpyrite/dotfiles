@@ -1,7 +1,6 @@
 [user]
   name = foreverpyrite
   email = git@foreverpyrite.com
-
 [init]
   defaultBranch = main
 

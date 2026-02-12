@@ -6,7 +6,7 @@ vim.loader.enable(false)
 
 -- Colors for Neovide & Tmux
 vim.o.termguicolors = true
-vim.cmd("colorscheme catppuccin-mocha")
+vim.cmd("colorscheme nightfox")
 
 -- Clipboard (hopefully, right now my clipboard provider is tmux ig so...)
 vim.o.clipboard = "unnamedplus"

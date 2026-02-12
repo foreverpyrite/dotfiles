@@ -1,4 +1,6 @@
-# 💤 LazyVim
+# uh it's neovim config using LazyVim
 
-A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
-Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
+Right now I'm assuming there are many redundancies with the colorscheme since it was bugging a while back
+Then like
+uh
+oh yeah the mini.autopair needs changing cause the quotes behavior annoys the hell out of me
