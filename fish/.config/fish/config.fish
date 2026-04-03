@@ -49,10 +49,11 @@ starship init fish | source
 # with the env of the tty or neovim instead of the wayland session is 
 # really annoying tbh
 
-if not tty | string match --quiet --regex '^/dev/tty[0-9]+$' and not set -q NVIM
-    # Making it a varible just in case I wanna change it some day
-    set DEFAULT_SESSION home
-    if status is-interactive && not set -q TMUX
-        tmux attach -t $DEFAULT_SESSION || tmux new-session -s $DEFAULT_SESSION
-    end
-end
+# This sucks, I'll figure something out
+# if not tty | string match --quiet --regex '^/dev/tty[0-9]+$' and not set -q NVIM
+#     # Making it a varible just in case I wanna change it some day
+#     set DEFAULT_SESSION home
+#     if status is-interactive && not set -q TMUX
+#         tmux attach -t $DEFAULT_SESSION || tmux new-session -s $DEFAULT_SESSION
+#     end
+# end

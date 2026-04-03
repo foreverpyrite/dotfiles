@@ -112,6 +112,13 @@ output "eDP-1" {
     // position x=1280 y=0
 }
 
+output "HDMI-A-1" {
+  mode "3440x1440@100.002"
+}
+output "DP-4" {
+  mode "3440x1440@120.000"
+}
+
 // Settings that influence how windows are positioned and sized.
 // Find more information on the wiki:
 // https://yalter.github.io/niri/Configuration:-Layout
@@ -397,7 +404,7 @@ binds {
     // Utility shortcuts
     Mod+V { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "launcher" "clipboard"; }
     // Mod+C { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "launcher" "calculator"; }
-    Mod+Alt+L { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "lockScreen" "toggle"; }
+    Mod+Alt+L { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "lockScreen" "lock"; }
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+T hotkey-overlay-title="Open a Terminal: alacritty" { spawn "alacritty"; }
