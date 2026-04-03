@@ -3,6 +3,9 @@
 set -x EDITOR nvim
 set -x PAGER bat
 
+# Vim keys
+fish_vi_key_bindings
+
 # --- PATH Configuration ---
 # Add Cargo's bin directory to the path
 fish_add_path "$HOME/.cargo/bin"

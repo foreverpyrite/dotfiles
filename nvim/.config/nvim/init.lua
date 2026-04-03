@@ -6,15 +6,37 @@ vim.loader.enable(false)
 
 -- Colors for Neovide & Tmux
 vim.o.termguicolors = true
-vim.cmd("colorscheme nightfox")
+vim.cmd("colorscheme flexoki-dark")
 
--- Clipboard (hopefully, right now my clipboard provider is tmux ig so...)
+-- Plugins
+-- local function gh(path)
+--   return string.format("https://github.com/%s", path)
+-- end
+vim.pack.add({
+  -- gh("stevearc/oil.nvim"),
+  "https://github.com/stevearc/oil.nvim",
+})
+vim.pack.update()
+require("oil").setup({
+  default_file_explorer = true,
+})
+
+-- Vim options
+vim.opt.undofile = true
+vim.opt.undolevels = 10000
+vim.cmd("packadd nvim.undotree")
+vim.cmd("packadd nvim.difftool")
+
+-- Keybinds
+
+-- Clipboard
 vim.o.clipboard = "unnamedplus"
 vim.api.nvim_set_keymap("", "<D-v>", "+p<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("!", "<D-v>", "<C-R>+", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("t", "<D-v>", "<C-R>+", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("v", "<D-v>", "<C-R>+", { noremap = true, silent = true })
 
+-- Neovide
 -- Is there a way I can set these in neovide config?
 if vim.g.neovide then
   -- Neovide copy & pasting
